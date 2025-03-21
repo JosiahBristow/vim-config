@@ -1,5 +1,3 @@
----
-
 ## Vim Configuration Installation and Usage Documentation
 
 ### 1. Environment Preparation
