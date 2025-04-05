@@ -195,24 +195,30 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 Below are the main plugins included in the configuration and their functionalities:
 
-| Plugin Name               | Description                                                              |
-|---------------------------|--------------------------------------------------------------------------|
-| `vim-matchup`             | Enhanced matching for brackets, tags, etc.                               |
-| `neoterm`                 | Open a terminal within Vim.                                              |
-| `coc.nvim`                | Code completion and LSP support (requires language servers).             |
-| `lightline.vim`           | Status line customization.                                               |
-| `vim-rainbow`             | Rainbow parentheses, with different colors for different levels.         |
-| `nerdtree`                | File tree explorer.                                                      |
-| `vim-fugitive`            | Git integration for Git commands.                                        |
-| `nerdcommenter`           | Quick code commenting.                                                   |
-| `tokyonight-vim`          | TokyoNight color scheme for a beautiful UI.                              |
-| `tagbar`                  | Displays tags (functions, classes, etc.) in code files.                  |
-| `indentLine`              | Displays indentation guides for code alignment.                          |
-| `vim-startify`            | Start page showing recently opened files.                                |
-| `vim-easymotion`          | Quick navigation to jump to specific locations.                          |
-| `fzf` and `fzf.vim`       | Fuzzy file and content search.                                           |
-| `fzf-funky`               | Function search within files.                                            |
-| `copilot.vim`             | GitHub Copilot support for AI-powered code completion.                   |
+| Plugin Name               | Description | Key Features | Recommended Usage |
+|---------------------------|-------------|--------------|-------------------|
+| `vim-matchup`             | Enhanced matching for brackets, tags, etc. | Extends % matching, supports HTML/XML tags, works with motion commands | Navigation in code with complex nested structures |
+| `vim-surround`             | Manipulate surroundings (quotes, brackets, tags) | Change/delete/add surroundings with simple commands | Quickly modifying code structure |
+| `neoterm`                 | Terminal emulator | Multiple terminal instances, REPL integration | Running tests, shells, or REPLs without leaving Vim |
+| `coc.nvim`                | Intellisense engine | LSP support, auto-completion, diagnostics | Modern IDE-like features for all languages |
+| `lightline.vim`           | Lightweight status line | Customizable, shows mode, git status, LSP info | Always visible status information |
+| `vim-rainbow`             | Colorful parentheses | Nested level coloring, customizable colors | Visualizing complex nested expressions |
+| `nerdtree`                | File system explorer | File operations, bookmarking, filtering | Project navigation and file management |
+| `vim-fugitive`            | Git wrapper | Full git functionality, diff views | Version control operations |
+| `nerdcommenter`           | Code commenting | Toggle comments, align comments | Quickly commenting code blocks |
+| `tokyonight-vim`          | Color scheme | Multiple variants (night, storm, etc.) | Aesthetic theming |
+| `tagbar`                  | Code structure viewer | Supports multiple languages | Overview of file structure |
+| `indentLine`              | Indentation guides | Customizable characters, colors | Visualizing indentation levels |
+| `vim-startify`            | Start screen | Sessions, MRU files, bookmarks | Quick project access |
+| `vim-easymotion`          | Motion enhancement | Jump to any visible location | Efficient navigation in large files |
+| `fzf`/`fzf.vim`           | Fuzzy finder | File search, content search, preview | Fast file and content navigation |
+| `fzf-funky`               | Function search | Context-aware function listing | Navigating code structure |
+| `copilot.vim`             | AI pair programmer | Code suggestions, multi-line completions | Accelerating coding tasks |
+| `emmet-vim`               | HTML/CSS expansion | Zen-coding abbreviations | Rapid HTML/CSS development |
+| `vim-javascript`          | JS syntax | Improved highlighting, indentation | JavaScript development |
+| `vim-css-color`           | Color previews | Inline color visualization | CSS/Styled Components work |
+| `vim-vue`                 | Vue support | Syntax highlighting, indentation | Vue.js single file components |
+| `vim-prettier`            | Code formatter | Auto-formatting, configurable | Maintaining consistent code style |
 
 ---
 
@@ -265,6 +271,13 @@ Below are the commonly used shortcuts defined in the configuration and their fun
 | `<Leader>tk`       | Kill terminal (`Tkill`)              |
 | `<Esc>`            | Switch to normal mode in terminal    |
 
+#### Complete The Option Selection
+| Shortcut           | Description                          |
+|--------------------|--------------------------------------|
+| `<Tab>`            | Move to next option                  |
+| `<S-Tab>`          | Move to previous option              |
+| `<Enter>`          | Accept the option                    |
+
 #### Window Operations
 | Shortcut           | Description                          |
 |--------------------|--------------------------------------|
@@ -280,6 +293,8 @@ Below are the commonly used shortcuts defined in the configuration and their fun
 #### Copilot Shortcuts
 | Shortcut           | Description                          |
 |--------------------|--------------------------------------|
+| `<C-c>`            | Enable copilot                       |
+| `<C-x>`            | Disable copilot                      |
 | `<C-J>`            | Accept Copilot suggestion            |
 | `<C-K>`            | View previous suggestion             |
 | `<C-L>`            | View next suggestion                 |
@@ -289,6 +304,7 @@ Below are the commonly used shortcuts defined in the configuration and their fun
 |--------------------|--------------------------------------|
 | `<C-r>`            | Reload configuration file (`source %`) |
 | `jk`               | Exit insert mode (`<Esc>`)           |
+| `<leader>cp`       | Open astringent board                |
 
 ---
 
