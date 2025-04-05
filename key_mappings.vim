@@ -75,5 +75,27 @@ inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Enter Key for Completion Confirmation
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+"                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Enable Github Coplit
+noremap <C-c> :Copilot enable<CR>
+" Disable Github Coplit
+noremap <C-x> :Copilot disable<CR>
+
+" Start server
+nmap <leader>lp :Bracey<CR>
+" Stop server
+nmap <leader>lq :BraceyStop<CR>
+
+" Copilot key mappings
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+imap <C-K> <Plug>(copilot-previous)
+imap <C-L> <Plug>(copilot-next)
+
+" Quick tag closing
+inoremap <expr> > getline('.')[col('.')-2] == '<' ? "><Left>" : ">"
+
+" Color picker
+nmap <leader>cp :VCoolor<CR>

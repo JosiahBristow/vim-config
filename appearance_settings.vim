@@ -39,3 +39,5 @@ set termguicolors
 
 " Use TokyoNight color scheme
 colorscheme tokyonight
+
+

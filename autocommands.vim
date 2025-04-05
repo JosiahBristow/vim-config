@@ -1,9 +1,12 @@
 " Add Shebang to new .sh files
-autocmd BufNewFile *.sh exec ":call SetTitle()"
+autocmd BufNewFile *.sh,*py exec ":call SetTitle()"
 func SetTitle()
     if expand("%:e") == 'sh'
       call setline(1,"#!/bin/bash")
       call setline(2,"")
+    elif expand("%:e") == 'py'
+      call setline(1,"#!/usr/bin/python3")
+      call setline(2,"--")
     endif
     exec ":2"
 endfunc
