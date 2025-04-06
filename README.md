@@ -167,6 +167,8 @@ mv ~/.config/nvim ~/.config/nvim_backup
 Clone the configuration files to your local machine:
 
 ```bash
+cd ~
+
 git clone https://github.com/josiahbristow/vim-config.git
 ```
 
